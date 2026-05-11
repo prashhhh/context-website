@@ -3,21 +3,28 @@
 require("dotenv").config();
 const mysql = require("mysql2");
 
-console.log("DB Config:", {
-  host: process.env.DB_HOST,
-  port: process.env.DB_PORT,
-  user: process.env.DB_USER,
-  database: process.env.DB_NAME,
-  password: process.env.DB_PASSWORD ? "SET" : "NOT SET",
-});
+let db;
 
-const db = mysql.createConnection({
-  host: process.env.DB_HOST,
-  port: parseInt(process.env.DB_PORT) || 3306,
-  user: process.env.DB_USER,
-  password: process.env.DB_PASSWORD,
-  database: process.env.DB_NAME,
-});
+// Use full URL if provided, otherwise use individual vars
+if (process.env.MYSQL_URL) {
+  console.log("Connecting via MYSQL_URL...");
+  db = mysql.createConnection(process.env.MYSQL_URL);
+} else {
+  console.log("DB Config:", {
+    host: process.env.DB_HOST,
+    port: process.env.DB_PORT,
+    user: process.env.DB_USER,
+    database: process.env.DB_NAME,
+    password: process.env.DB_PASSWORD ? "SET" : "NOT SET",
+  });
+  db = mysql.createConnection({
+    host: process.env.DB_HOST,
+    port: parseInt(process.env.DB_PORT) || 3306,
+    user: process.env.DB_USER,
+    password: process.env.DB_PASSWORD,
+    database: process.env.DB_NAME,
+  });
+}
 
 db.connect((err) => {
   if (err) {
