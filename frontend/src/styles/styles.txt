@@ -1,0 +1,157 @@
+
+
+
+/** @format */
+
+
+body {
+  background: #f5f7fb;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  /* margin: 0;
+  padding: 0; */
+}
+
+/* Navbar */
+
+.navbar-custom {
+  background: linear-gradient(90deg, #141e30, #243b55);
+}
+
+.brand-title {
+  font-weight: bold;
+  font-size: 22px;
+  letter-spacing: 1px;
+}
+
+/* Context Card */
+
+.context-card {
+  border-radius: 15px;
+  transition: 0.3s ease;
+  border: none;
+}
+
+.context-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Heading */
+
+.main-heading {
+  font-weight: 700;
+  color: #243b55;
+  margin-bottom: 30px;
+}
+
+/* Footer */
+
+.footer {
+  background: linear-gradient(90deg, #141e30, #243b55);
+  color: white;
+}
+/* Floating Contact Button */
+
+.contact-wrapper {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
+}
+
+/* Small Button */
+
+.contact-btn {
+  background: #0d6efd;
+  color: white;
+  border: none;
+  padding: 14px 22px;
+  border-radius: 50px;
+  font-weight: 600;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+  transition: 0.3s;
+}
+
+.contact-btn:hover {
+  transform: scale(1.05);
+}
+
+/* Expanded Box */
+
+.contact-box {
+  width: 350px;
+  background: white;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+  animation: slideUp 0.3s ease;
+}
+
+/* Header */
+
+.contact-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.contact-header h5 {
+  margin: 0;
+  color: #243b55;
+  font-weight: 700;
+}
+
+/* Close */
+
+.close-btn {
+  border: none;
+  background: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: red;
+}
+
+/* Animation */
+
+@keyframes slideUp {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+/* Buttons */
+
+.btn-custom {
+  background: linear-gradient(90deg, #00c6ff, #0072ff);
+  border: none;
+  color: white;
+}
+
+.btn-custom:hover {
+  background: linear-gradient(90deg, #0072ff, #00c6ff);
+}
+
+/* Form */
+
+.form-control {
+  border-radius: 10px;
+}
+
+.hero-section {
+  background: linear-gradient(90deg, #141e30, #243b55);
+  padding: 80px 0;
+  margin-bottom: 40px;
+}
+
+.hero-section h1 {
+  font-weight: 700;
+}
+
+.hero-section p {
+  font-size: 18px;
+}

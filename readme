@@ -1,0 +1,14 @@
+
+project structure:
+context-website/
+│
+├── backend/
+│   ├── server.js
+│   ├── db.js
+│
+└── frontend/
+    ├── src/
+    │   ├── App.js
+    │   ├── Navbar.js
+    │   ├── ContextDisplay.js
+    │   └── Footer.js
