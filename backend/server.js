@@ -9,9 +9,13 @@ const db = require("./db");
 const app = express();
 const PORT = process.env.PORT || 5000;
 
-const CONTEXT_DURATION_MS = 7 * 60 * 1000; // 7 minutes
+const CONTEXT_DURATION_MS = 17 * 60 * 1000; // 17 minutes
 
-app.use(cors());
+app.use(
+  cors({
+    origin: ["http://localhost:5173", /\.vercel\.app$/],
+  }),
+);
 app.use(express.json({ limit: "5mb" }));
 app.use(express.urlencoded({ extended: true, limit: "5mb" }));
 
