@@ -7,7 +7,7 @@ export default function Hero({ onWrite, cooldown, remainingMs }) {
     <section className="hero">
       <div className="hero-content">
         <h1>Welcome to Context</h1>
-        <p>One thought at a time. Share yours — it lives for 7 minutes.</p>
+        <p>One thought at a time. Share yours — it lives for 17 minutes.</p>
         <button
           className={`hero-btn ${cooldown ? "hero-btn-locked" : ""}`}
           onClick={onWrite}

@@ -79,9 +79,9 @@ export default function WriteModal({
           <div className="modal-locked">
             <div className="modal-lock-icon">🔒</div>
             <h2>Context is active</h2>
-            <p>Someone's context is currently live. Come back in:</p>
+            <p>Someone's context is currently live :</p>
             <div className="modal-countdown">{formatTime(remainingMs)}</div>
-            <p className="modal-locked-sub">Only one context at a time.</p>
+            {/* <p className="modal-locked-sub">Only one context at a time.</p> */}
             <button className="btn-ghost" onClick={onClose}>
               Got it
             </button>
@@ -124,7 +124,7 @@ export default function WriteModal({
                   ref={textRef}
                   className="textarea-story"
                   placeholder={
-                    "Start writing here...\n\nYou can write a short thought or a long story — there's no limit on how much you share. This space is yours for the next 7 minutes."
+                    "Start writing here...\n\nYou can write a short thought or a long story — there's no limit on how much you share. This space is yours for the next 17 minutes."
                   }
                   value={text}
                   onChange={handleTextChange}
@@ -147,7 +147,7 @@ export default function WriteModal({
               {error && <div className="modal-error">{error}</div>}
 
               <div className="modal-note">
-                ⏱ Your context will disappear after <strong>7 minutes</strong>.
+                ⏱ Your context will disappear after <strong>17 minutes</strong>.
                 Write as much as you want.
               </div>
             </div>
