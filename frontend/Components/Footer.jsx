@@ -5,7 +5,7 @@ export default function Footer() {
     <footer className="footer">
       <p>
         One context at a time ·{" "}
-        <a href="mailto:you@example.com">Contact Developer</a>
+        <a href="mailto:prashhhh591@gmail.com">Contact Developer</a>
       </p>
     </footer>
   );
